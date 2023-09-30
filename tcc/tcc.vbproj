@@ -1,0 +1,737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB5DF7C3-C802-49A4-B85D-0E5BEBCF9E60}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>tcc.My.MyApplication</StartupObject>
+    <RootNamespace>tcc</RootNamespace>
+    <AssemblyName>tcc</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>tcc.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>tcc.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consultas\FrmConLocaçãoPeriodo.Designer.vb">
+      <DependentUpon>FrmConLocaçãoPeriodo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConLocaçãoPeriodo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmConManuArmaArmero.Designer.vb">
+      <DependentUpon>FrmConManuArmaArmero.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConManuArmaArmero.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\ClsLocConsulta.vb" />
+    <Compile Include="Cadastros\FrmArmaria.Designer.vb">
+      <DependentUpon>FrmArmaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FrmArmaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FrmCadArmero.Designer.vb">
+      <DependentUpon>FrmCadArmero.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FrmCadArmero.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FrmCadFunc.Designer.vb">
+      <DependentUpon>FrmCadFunc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FrmCadFunc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FrmCadJogador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FrmCadJogador.Designer.vb">
+      <DependentUpon>FrmCadJogador.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FrmCadProdArmaria.Designer.vb">
+      <DependentUpon>FrmCadProdArmaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FrmCadProdArmaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FrmCadProdLanco.Designer.vb">
+      <DependentUpon>FrmCadProdLanco.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FrmCadProdLanco.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FrmDevolucaoArma.Designer.vb">
+      <DependentUpon>FrmDevolucaoArma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FrmDevolucaoArma.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FrmLanconete.Designer.vb">
+      <DependentUpon>FrmLanconete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FrmLanconete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\ClsArmaria.vb" />
+    <Compile Include="Classes\ClsArmero.vb" />
+    <Compile Include="Classes\ClsBanco.vb" />
+    <Compile Include="Classes\ClsComanda.vb" />
+    <Compile Include="Classes\ClsControle.vb" />
+    <Compile Include="Classes\ClsFuncionario.vb" />
+    <Compile Include="Classes\ClsItem.vb" />
+    <Compile Include="Classes\ClsItensLoc.vb" />
+    <Compile Include="Classes\ClsJogador.vb" />
+    <Compile Include="Classes\ClsLanchoneteConsulta.vb" />
+    <Compile Include="Classes\ClsLanco.vb" />
+    <Compile Include="Classes\ClsManuArma.vb" />
+    <Compile Include="Classes\ClsPonto.vb" />
+    <Compile Include="Classes\ClsVendArmaria.vb" />
+    <Compile Include="Classes\ClsVendLanco.vb" />
+    <Compile Include="Consultas\FrmConManuArmaData.Designer.vb">
+      <DependentUpon>FrmConManuArmaData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConManuArmaData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmConManuArmaDataFim.Designer.vb">
+      <DependentUpon>FrmConManuArmaDataFim.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConManuArmaDataFim.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmConNomeCodJogadorLoc.Designer.vb">
+      <DependentUpon>FrmConNomeCodJogadorLoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConNomeCodJogadorLoc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmConPeriodoVendasArmaria.Designer.vb">
+      <DependentUpon>FrmConPeriodoVendasArmaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConPeriodoVendasArmaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmConVendaClivendaArmaria.Designer.vb">
+      <DependentUpon>FrmConVendaClivendaArmaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConVendaClivendaArmaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmConComandaPorData.Designer.vb">
+      <DependentUpon>FrmConComandaPorData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConComandaPorData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmComArmaria.Designer.vb">
+      <DependentUpon>FrmComArmaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmComArmaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmComArmero.Designer.vb">
+      <DependentUpon>FrmComArmero.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmComArmero.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmComComan.Designer.vb">
+      <DependentUpon>FrmComComan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmComComan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmComFunc.Designer.vb">
+      <DependentUpon>FrmComFunc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmComFunc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmComJogador.Designer.vb">
+      <DependentUpon>FrmComJogador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmComJogador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmComLanco.Designer.vb">
+      <DependentUpon>FrmComLanco.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmComLanco.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmComProdArmCatego.Designer.vb">
+      <DependentUpon>FrmComProdArmCatego.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmComProdArmCatego.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmComProdLancCatego.Designer.vb">
+      <DependentUpon>FrmComProdLancCatego.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmComProdLancCatego.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmComTipoDPagamento.Designer.vb">
+      <DependentUpon>FrmComTipoDPagamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmComTipoDPagamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmConComandaPeriodo.Designer.vb">
+      <DependentUpon>FrmConComandaPeriodo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConComandaPeriodo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmConVendasLancoCli.Designer.vb">
+      <DependentUpon>FrmConVendasLancoCli.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConVendasLancoCli.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmConVendasLancoFunc.Designer.vb">
+      <DependentUpon>FrmConVendasLancoFunc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConVendasLancoFunc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Graficos\CrpGrabanidos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpGrabanidos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Graficos\CrpGraComandaCampo.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpGraComandaCampo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Graficos\CrpGrafTotalPreçoPorDataArmaria.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpGrafTotalPreçoPorDataArmaria.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Graficos\CrpGraFuncArea.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpGraFuncArea.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Graficos\CrpGraTipoArmaria.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpGraTipoArmaria.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Graficos\CrpGraTipoLancho.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpGraTipoLancho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Graficos\CrpGrafTotalPreçoPorDadaLancho.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpGrafTotalPreçoPorDadaLancho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\Graficos\CrpManu.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpManu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Cadastros\FrmComanda.Designer.vb">
+      <DependentUpon>FrmComanda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FrmComanda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\FrmManutencaoArma.Designer.vb">
+      <DependentUpon>FrmManutencaoArma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastros\FrmManutencaoArma.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmConVendasArmariaFunc.Designer.vb">
+      <DependentUpon>FrmConVendasArmariaFunc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConVendasArmariaFunc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmConDataVendasArmaria.Designer.vb">
+      <DependentUpon>FrmConDataVendasArmaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConDataVendasArmaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmConVendasCliente.Designer.vb">
+      <DependentUpon>FrmConVendasCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConVendasCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmConManuArma.Designer.vb">
+      <DependentUpon>FrmConManuArma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConManuArma.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmConNomeCodArmaLoc.Designer.vb">
+      <DependentUpon>FrmConNomeCodArmaLoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConNomeCodArmaLoc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outros\FrmImp.Designer.vb">
+      <DependentUpon>FrmImp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Outros\FrmImp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outros\FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Outros\FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outros\FrmMenuFuncionario.Designer.vb">
+      <DependentUpon>FrmMenuFuncionario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Outros\FrmMenuFuncionario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outros\FrmMenuGerente.Designer.vb">
+      <DependentUpon>FrmMenuGerente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Outros\FrmMenuGerente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\FrmConLocaçãoData.Designer.vb">
+      <DependentUpon>FrmConLocaçãoData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\FrmConLocaçãoData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorios\CrpCadastroDeFuncionario.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpCadastroDeFuncionario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\CrpCadastroDeJogador.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpCadastroDeJogador.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\CrpCadastroDoArmero.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpCadastroDoArmero.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\CrpCadastroProdutoArmaria.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpCadastroProdutoArmaria.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\CrpCadastroProdutoLancho.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpCadastroProdutoLancho.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\CrpComandaSql.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpComandaSql.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\CrpLocaçaoSql.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpLocaçaoSql.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\CrpManutençaoSql.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpManutençaoSql.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\CrpVendaArmariaFunc.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpVendaArmariaFunc.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorios\CrpVendaLanchoneteSql.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpVendaLanchoneteSql.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Cadastros\FrmArmaria.resx">
+      <DependentUpon>FrmArmaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FrmCadArmero.resx">
+      <DependentUpon>FrmCadArmero.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FrmCadFunc.resx">
+      <DependentUpon>FrmCadFunc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FrmCadJogador.resx">
+      <DependentUpon>FrmCadJogador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FrmCadProdArmaria.resx">
+      <DependentUpon>FrmCadProdArmaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FrmCadProdLanco.resx">
+      <DependentUpon>FrmCadProdLanco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConLocaçãoPeriodo.resx">
+      <DependentUpon>FrmConLocaçãoPeriodo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConManuArmaArmero.resx">
+      <DependentUpon>FrmConManuArmaArmero.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FrmDevolucaoArma.resx">
+      <DependentUpon>FrmDevolucaoArma.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FrmLanconete.resx">
+      <DependentUpon>FrmLanconete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConManuArmaData.resx">
+      <DependentUpon>FrmConManuArmaData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConManuArmaDataFim.resx">
+      <DependentUpon>FrmConManuArmaDataFim.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConNomeCodJogadorLoc.resx">
+      <DependentUpon>FrmConNomeCodJogadorLoc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConPeriodoVendasArmaria.resx">
+      <DependentUpon>FrmConPeriodoVendasArmaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConVendaClivendaArmaria.resx">
+      <DependentUpon>FrmConVendaClivendaArmaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConComandaPorData.resx">
+      <DependentUpon>FrmConComandaPorData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmComArmaria.resx">
+      <DependentUpon>FrmComArmaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmComArmero.resx">
+      <DependentUpon>FrmComArmero.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmComComan.resx">
+      <DependentUpon>FrmComComan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmComFunc.resx">
+      <DependentUpon>FrmComFunc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmComJogador.resx">
+      <DependentUpon>FrmComJogador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmComLanco.resx">
+      <DependentUpon>FrmComLanco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmComProdArmCatego.resx">
+      <DependentUpon>FrmComProdArmCatego.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmComProdLancCatego.resx">
+      <DependentUpon>FrmComProdLancCatego.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmComTipoDPagamento.resx">
+      <DependentUpon>FrmComTipoDPagamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConComandaPeriodo.resx">
+      <DependentUpon>FrmConComandaPeriodo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConVendasLancoCli.resx">
+      <DependentUpon>FrmConVendasLancoCli.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConVendasLancoFunc.resx">
+      <DependentUpon>FrmConVendasLancoFunc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Graficos\CrpGrabanidos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpGrabanidos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Graficos\CrpGraComandaCampo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpGraComandaCampo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Graficos\CrpGrafTotalPreçoPorDataArmaria.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpGrafTotalPreçoPorDataArmaria.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Graficos\CrpGraFuncArea.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpGraFuncArea.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Graficos\CrpGraTipoArmaria.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpGraTipoArmaria.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Graficos\CrpGraTipoLancho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpGraTipoLancho.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Graficos\CrpGrafTotalPreçoPorDadaLancho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpGrafTotalPreçoPorDadaLancho.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\Graficos\CrpManu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpManu.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FrmComanda.resx">
+      <DependentUpon>FrmComanda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastros\FrmManutencaoArma.resx">
+      <DependentUpon>FrmManutencaoArma.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConVendasArmariaFunc.resx">
+      <DependentUpon>FrmConVendasArmariaFunc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConDataVendasArmaria.resx">
+      <DependentUpon>FrmConDataVendasArmaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConVendasCliente.resx">
+      <DependentUpon>FrmConVendasCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConManuArma.resx">
+      <DependentUpon>FrmConManuArma.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConNomeCodArmaLoc.resx">
+      <DependentUpon>FrmConNomeCodArmaLoc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outros\FrmImp.resx">
+      <DependentUpon>FrmImp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outros\FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outros\FrmMenuFuncionario.resx">
+      <DependentUpon>FrmMenuFuncionario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outros\FrmMenuGerente.resx">
+      <DependentUpon>FrmMenuGerente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\FrmConLocaçãoData.resx">
+      <DependentUpon>FrmConLocaçãoData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\CrpCadastroDeFuncionario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpCadastroDeFuncionario.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\CrpCadastroDeJogador.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpCadastroDeJogador.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\CrpCadastroDoArmero.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpCadastroDoArmero.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\CrpCadastroProdutoArmaria.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpCadastroProdutoArmaria.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\CrpCadastroProdutoLancho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpCadastroProdutoLancho.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\CrpComandaSql.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpComandaSql.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\CrpLocaçaoSql.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpLocaçaoSql.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\CrpManutençaoSql.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpManutençaoSql.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\CrpVendaArmariaFunc.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpVendaArmariaFunc.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\CrpVendaLanchoneteSql.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpVendaLanchoneteSql.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="olho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="-.png" />
+    <Content Include="LogoReator.png" />
+    <Content Include="o.png" />
+    <None Include="Olhotes.png" />
+    <Content Include="Relatorios\logo.png" />
+    <Content Include="Resources\-.png" />
+    <Content Include="Resources\o.png" />
+    <Content Include="Resources\x.png" />
+    <Content Include="x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
